@@ -79,34 +79,27 @@ class ProductTableViewCell: UITableViewCell {
     
     private func styleView()
     {
-        contentView.backgroundColor = .white
         contentView.addSubview(containerView)
         containerView.anchor(contentView.topAnchor, left: contentView.leftAnchor, bottom: contentView.bottomAnchor, right: contentView.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
         containerView.addSubview(productImageView)
-        productImageView.anchor(nil, left: containerView.leftAnchor, bottom: nil, right: nil, topConstant: 8, leftConstant: 8, bottomConstant: 8, rightConstant: 0, widthConstant: 90, heightConstant: 90)
+        productImageView.anchor(nil, left: containerView.leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 8, bottomConstant: 0, rightConstant: 0, widthConstant: 100, heightConstant: 100)
         productImageView.anchorCenterYToSuperview(constant: 0)
         
         containerView.addSubview(productName)
-        productName.anchor(containerView.topAnchor, left: productImageView.rightAnchor, bottom: nil, right: containerView.rightAnchor, topConstant: 8, leftConstant: 8, bottomConstant: 0, rightConstant: 10, widthConstant: 0, heightConstant: 0)
-        productName.textAlignment = .right
+        productName.anchor(containerView.topAnchor, left: productImageView.rightAnchor, bottom: nil, right: nil, topConstant: 8, leftConstant: 8, bottomConstant: 0, rightConstant: 8, widthConstant: 0, heightConstant: 0)
         
         containerView.addSubview(productPrice)
-        productPrice.anchor(productName.bottomAnchor, left: productImageView.leftAnchor, bottom: nil, right: containerView.rightAnchor, topConstant: 8, leftConstant: 8, bottomConstant: 0, rightConstant: 8, widthConstant: 0, heightConstant: 0)
-        productPrice.textAlignment = .right
+        productPrice.anchor(productName.bottomAnchor, left: productImageView.rightAnchor, bottom: nil, right: nil, topConstant: 8, leftConstant: 8, bottomConstant: 0, rightConstant: 8, widthConstant: 120, heightConstant: 0)
 
         containerView.addSubview(productOfferPrice)
-        productOfferPrice.anchor(productPrice.bottomAnchor, left: productImageView.leftAnchor, bottom: nil, right: containerView.rightAnchor, topConstant: 8, leftConstant: 8, bottomConstant: 0, rightConstant: 8, widthConstant: 0, heightConstant: 0)
-        productOfferPrice.textAlignment = .right
+        productOfferPrice.anchor(productPrice.bottomAnchor, left: productImageView.rightAnchor, bottom: nil, right: nil, topConstant: 8, leftConstant: 8, bottomConstant: 0, rightConstant: 8, widthConstant: 120, heightConstant: 0)
         
         containerView.addSubview(productStrikeThroughPriceDisplay)
-        productStrikeThroughPriceDisplay.anchor(productOfferPrice.bottomAnchor, left: productImageView.leftAnchor, bottom: nil, right: containerView.rightAnchor, topConstant: 8, leftConstant: 8, bottomConstant: 0, rightConstant: 8, widthConstant: 0, heightConstant: 0)
-        productStrikeThroughPriceDisplay.textAlignment = .right
+        productStrikeThroughPriceDisplay.anchor(productOfferPrice.bottomAnchor, left: productImageView.rightAnchor, bottom: nil, right: nil, topConstant: 8, leftConstant: 8, bottomConstant: 0, rightConstant: 8, widthConstant: 120, heightConstant: 0)
         
         containerView.addSubview(productBookButton)
-        productBookButton.anchor(nil, left: nil, bottom: containerView.bottomAnchor, right: containerView.rightAnchor, topConstant: 8, leftConstant: 0, bottomConstant: 8, rightConstant: 8, widthConstant: 80, heightConstant: 40)
-        
-
+        productBookButton.anchor(nil, left: nil, bottom: containerView.bottomAnchor, right: containerView.rightAnchor, topConstant: 8, leftConstant: 0, bottomConstant: 8, rightConstant: -8, widthConstant: 80, heightConstant: 40)
         
     }
     
